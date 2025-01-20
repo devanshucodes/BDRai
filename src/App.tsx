@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, MessageSquare, Frame, Send, Loader2, Zap } from 'lucide-react';
 import { generateResponse } from './lib/gemini';
 
-type Mode = 'email' | 'reply' | 'frame';
+type Mode = 'email' | 'reply' | 'frame' | 'prospect';
 
 function App() {
   const [mode, setMode] = useState<Mode>('email');
@@ -33,7 +33,8 @@ function App() {
   const modes = [
     { id: 'email', icon: Mail, label: 'Write Email' },
     { id: 'reply', icon: MessageSquare, label: 'Reply to Message' },
-    { id: 'frame', icon: Frame, label: 'Frame a Message' }
+    { id: 'frame', icon: Frame, label: 'Frame a Message' },
+    { id: 'prospect', icon: Frame, label: 'Do Prospecting' }
   ];
 
   const inputClasses = "mt-1 block w-full rounded-lg bg-white/5 border border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:ring-blue-500 px-4 py-2";
@@ -86,7 +87,7 @@ function App() {
 
             <div className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
-                {mode === 'email' && (
+              {mode === 'email' && (
                   <>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div>
@@ -176,6 +177,29 @@ function App() {
                         required
                       />
                     </div>
+                  </>
+                )}
+
+                {mode === 'prospect' && (
+                  <>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-300">
+                          Organization Name
+                        </label>
+                        <input
+                          type="text"
+                          value={formData.org}
+                          onChange={(e) => setFormData({ ...formData, org: e.target.value })}
+                          className={inputClasses}
+                          placeholder="e.g., PO Name"
+                          required
+                        />
+                      </div>
+                    
+                      
+                    </div>
+                    
                   </>
                 )}
 
