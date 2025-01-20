@@ -121,7 +121,7 @@ const getPrompt = (type: string, context: { org?: string; person?: string; messa
       - Intelligently weave in specific LambdaTest features that directly address their needs and challenges, focusing on outcomes and business value.
       - Include highly relevant social proof by briefly mentioning how similar companies (in terms of industry, size, or testing needs) leverage LambdaTest to achieve specific, quantifiable results (e.g., "accelerate their testing by 50%," "reduce bug escape rate by 30%").
       - Offer a clear and compelling call to action, suggesting a specific time slot for a short 15-minute introductory call to explore how LambdaTest can specifically address their company's unique challenges and goals. Example: "Would you be available for a quick 15-minute chat next Tuesday at 2 PM EST to discuss how LambdaTest can help [their company] achieve [desired outcome]?"
-      - Be concise (max 150 words).
+      - Be concise (max 100 words).
       - Use a professional yet conversational tone that is engaging and approachable.
       - Focus on the value LambdaTest brings to their organization, not just a list of features.
       - Incorporate bullet points for improved readability when listing benefits or key features.
@@ -147,7 +147,7 @@ const getPrompt = (type: string, context: { org?: string; person?: string; messa
       - Intelligently incorporate relevant resources (mention product overview, video, or documentation when appropriate) that directly address their questions or concerns. Be specific about what they'll find in the resource. For example: "To further elaborate on your question about integration with [specific tool], I've included a link to our detailed documentation that outlines the process: [link]"
       - Focus on moving the conversation towards a meeting or demo by highlighting the value of a personalized discussion.
       - Offer clear next steps that are easy to follow and encourage further engagement.
-      - Keep this message short and concise; it should be less than 100-150 words.
+      - Keep this message short and concise; it should be less than 50 words.
       - Maintain a positive and proactive tone, keeping the momentum going.
       - Address any potential objections proactively by providing data, success stories, or relevant use cases.
       - Highlight relevant success stories or use cases that resonate with the prospect's industry or challenges.
@@ -164,7 +164,7 @@ const getPrompt = (type: string, context: { org?: string; person?: string; messa
       - Suggest effective ways to handle common objections by reframing them as opportunities or addressing them with data, testimonials, and success stories. For example: "If they express concern about the cost of implementation, highlight the long-term ROI achieved by similar companies using LambdaTest, focusing on cost savings from reduced testing time, improved efficiency, and fewer production defects."
       - Include relevant customer success stories that align with the prospect's industry, company size, or specific challenges.
       - Provide specific metrics and outcomes that LambdaTest has helped other companies achieve, such as "reduced testing time by 70%," "increased test coverage by 40%," or "improved release velocity by 2x."
-      - Keep this message short and concise; it should be less than 100-150 words.
+      - Keep this message short and concise; it should be less than 50 words.
       - Focus on the prospect's role, likely challenges, and how LambdaTest can help them achieve their goals.
       - Include insightful conversation starters and discovery questions to better understand their needs and tailor the conversation accordingly.
       - Suggest effective follow-up strategies to keep the conversation going and move towards a meeting or demo.
